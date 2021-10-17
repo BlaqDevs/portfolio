@@ -9,25 +9,25 @@
         <v-tabs elevation="" background-color="primary" color="white">
           <v-tab to="#about">
             <v-icon class="d-flex d-sm-none">
-              face
+              mdi-face-man-profile
             </v-icon>
             <span class="hidden-xs-only">About</span>
           </v-tab>
           <v-tab to="#experience">
             <v-icon class="d-flex d-sm-none">
-              account_tree
+              mdi-file-tree
             </v-icon>
             <span class="hidden-xs-only">Experience</span>
           </v-tab>
           <v-tab to="#projects">
             <v-icon class="d-flex d-sm-none">
-              apps
+              mdi-apps
             </v-icon>
             <span class="hidden-xs-only">Projects</span>
           </v-tab>
           <v-tab to="#contact">
             <v-icon class="d-flex d-sm-none">
-              contact_mail
+              mdi-card-account-mail-outline
             </v-icon>
             <span class="hidden-xs-only">Contact</span>
           </v-tab>

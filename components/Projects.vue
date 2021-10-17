@@ -1,40 +1,41 @@
 <template>
-  <v-card>
+  <v-card width="800" class="my-15">
     <v-card-title primary-title>
       <v-icon left>
-        apps
+        mdi-apps
       </v-icon>
+      <span>Projects</span>
     </v-card-title>
     <v-divider />
     <v-card-text>
-      <v-row align="center" class="mx-0">
-        <v-rating
-          :value="4.5"
-          color="amber"
-          dense
-          half-increments
-          readonly
-          size="14"
-        ></v-rating>
-
-        <div class="grey--text ms-4">
-          4.5 (413)
-        </div>
-      </v-row>
-      <span>
-        Hi, I am a passionate developer with good experience designing Webapps,
-        Blogs, Android Apps, Opensource Projects, etc utilizing varieties of
-        Software Technologies which include Vuejs, Nuxt, Flutter, Nodejs,
-        Django, JQuery, Tailwindcss, Scss, Git</span
-      >
-
-      <div>
-        Small plates, salads & sandwiches - an intimate setting with 12 indoor
-        seats plus patio seating.
-      </div>
+      <v-container class="">
+        <v-row>
+          <v-col v-for="i in experience" :key="i.place">
+            <v-hover>
+              <template v-slot:default="{ hover }">
+                <v-card
+                  transition="slide-x-transition"
+                  :class="`elevation-${hover ? 24 : 6}`"
+                  class="mx-auto pa-6 transition-swing"
+                >
+                  <v-card-title primary-title>
+                    {{ i.place }}
+                  </v-card-title>
+                  <v-card-text>
+                    <span>{{ i.title }}</span>
+                    <br>
+                    <br>
+                    <span>
+                      {{ i.content }}
+                    </span>
+                  </v-card-text>
+                </v-card>
+              </template>
+            </v-hover>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-card-text>
-
-    <v-divider class="mx-4"></v-divider>
 
     <v-card-title>Tonight's availability</v-card-title>
 
@@ -53,15 +54,30 @@
         <v-chip>9:00PM</v-chip>
       </v-chip-group>
     </v-card-text>
-
-    <v-card-actions>
-      <v-btn color="deep-purple lighten-2" text @click="reserve">
-        Reserve
-      </v-btn>
-    </v-card-actions>
   </v-card>
 </template>
 
 <script>
-export default {};
+export default {
+  data () {
+    return {
+      projects: [
+        {
+          title: '',
+          content: '',
+          tech: [
+            {
+              name: 'Vue',
+              icon: 'mdi-vuejs'
+            },
+            {
+              name: 'vuetify',
+              icon: 'mdi-vuetify'
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 </script>

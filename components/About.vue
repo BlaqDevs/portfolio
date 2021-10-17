@@ -86,7 +86,7 @@
       <v-row justify="center">
         <v-btn rounded block text outlined>
           <v-icon left color="">
-            work
+            mdi-account-hard-hat
           </v-icon>
           <span>Resume</span>
         </v-btn>
