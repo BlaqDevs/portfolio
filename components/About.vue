@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto my-16" width="800">
+  <v-card class="mx-auto my-16" width="900">
     <v-card-title class="justify-center mt-n14 ">
       <v-avatar size="200" color="white" class=" mt-n14 pb-1">
         <img src="~/static/blaqdevs.jpeg" alt="">
@@ -61,6 +61,8 @@
         <v-chip class="ma-3">
           Quasar
         </v-chip>
+      </v-row>
+      <v-row justify="center">
         <v-chip class="ma-3">
           <v-icon left>
             mdi-language-javascript

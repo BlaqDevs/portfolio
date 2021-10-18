@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" width="800">
+  <v-card class="mx-auto" width="900">
     <v-card-title>
       <v-icon left>
         mdi-file-tree
@@ -10,11 +10,16 @@
     <v-card-text>
       <v-container class="">
         <v-row>
-          <v-col v-for="i in experience" :key="i.place">
+          <v-col
+            v-for="i in experience"
+            :key="i.place"
+            lg="6"
+            md="6"
+            xs="12"
+          >
             <v-hover>
               <template v-slot:default="{ hover }">
                 <v-card
-                  transition="slide-x-transition"
                   :class="`elevation-${hover ? 24 : 6}`"
                   class="mx-auto pa-6 transition-swing"
                 >

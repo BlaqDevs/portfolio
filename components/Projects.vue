@@ -1,5 +1,5 @@
 <template>
-  <v-card width="800" class="my-15">
+  <v-card width="900" class="my-15">
     <v-card-title primary-title>
       <v-icon left>
         mdi-apps
@@ -10,7 +10,7 @@
     <v-card-text>
       <v-container class="">
         <v-row>
-          <v-col v-for="i in experience" :key="i.place">
+          <v-col v-for="project in projects" :key="project.title" lg="6" md="6" xs="12">
             <v-hover>
               <template v-slot:default="{ hover }">
                 <v-card
@@ -19,15 +19,35 @@
                   class="mx-auto pa-6 transition-swing"
                 >
                   <v-card-title primary-title>
-                    {{ i.place }}
+                    {{ project.title }}
                   </v-card-title>
                   <v-card-text>
-                    <span>{{ i.title }}</span>
+                    <span>{{ project.content }}</span>
                     <br>
                     <br>
-                    <span>
-                      {{ i.content }}
-                    </span>
+                    <v-chip
+                      v-for="tec in project.tech"
+                      :key="tec.name"
+                      class="ma-1"
+                      small
+                    >
+                      <v-icon color="" left small>
+                        {{ tec.icon }}
+                      </v-icon>
+                      <span>{{ tec.name }}</span>
+                    </v-chip>
+                    <v-divider class="my-3" />
+                    <v-chip
+                      v-for="link in project.links"
+                      :key="link.name"
+                      class="ma-2"
+                      small
+                    >
+                      <v-icon color="" small left>
+                        {{ link.icon }}
+                      </v-icon>
+                      <span>{{ link.name }}</span>
+                    </v-chip>
                   </v-card-text>
                 </v-card>
               </template>
@@ -35,24 +55,6 @@
           </v-col>
         </v-row>
       </v-container>
-    </v-card-text>
-
-    <v-card-title>Tonight's availability</v-card-title>
-
-    <v-card-text>
-      <v-chip-group
-        v-model="selection"
-        active-class="deep-purple accent-4 white--text"
-        column
-      >
-        <v-chip>5:30PM</v-chip>
-
-        <v-chip>7:30PM</v-chip>
-
-        <v-chip>8:00PM</v-chip>
-
-        <v-chip>9:00PM</v-chip>
-      </v-chip-group>
     </v-card-text>
   </v-card>
 </template>
@@ -63,16 +65,89 @@ export default {
     return {
       projects: [
         {
-          title: '',
-          content: '',
+          title: 'Portfolio',
+          content: 'this portfolio',
           tech: [
             {
               name: 'Vue',
               icon: 'mdi-vuejs'
             },
             {
+              name: 'Nuxt',
+              icon: 'mdi-nuxt'
+            },
+            {
               name: 'vuetify',
               icon: 'mdi-vuetify'
+            }
+          ],
+          links: [
+            {
+              name: 'Github',
+              icon: 'mdi-github'
+            },
+            {
+              name: 'Live',
+              icon: 'mdi-eye'
+            }
+          ]
+        },
+        {
+          title: 'Reservation Landing Page',
+          content: 'A resturant reservation landing page',
+          tech: [
+            {
+              name: 'Vue',
+              icon: 'mdi-vuejs'
+            },
+            {
+              name: 'Nuxt',
+              icon: 'mdi-nuxt'
+            },
+            {
+              name: 'vuetify',
+              icon: 'mdi-vuetify'
+            }
+          ],
+          links: [
+            {
+              name: 'Github',
+              icon: 'mdi-github'
+            },
+            {
+              name: 'Live',
+              icon: 'mdi-eye',
+              link: ''
+            }
+          ]
+        },
+        {
+          title: 'Portfolio',
+          content: 'this portfolio',
+          tech: [
+            {
+              name: 'Vue',
+              icon: 'mdi-vuejs'
+            },
+            {
+              name: 'Nuxt',
+              icon: 'mdi-nuxt'
+            },
+            {
+              name: 'vuetify',
+              icon: 'mdi-vuetify'
+            }
+          ],
+          links: [
+            {
+              name: 'Github',
+              icon: 'mdi-github',
+              link: ''
+            },
+            {
+              name: 'Live',
+              icon: 'mdi-eye',
+              link: ''
             }
           ]
         }
