@@ -15,6 +15,7 @@
             :key="i.place"
             lg="6"
             md="6"
+            sm="6"
             xs="12"
           >
             <v-hover>

@@ -10,7 +10,14 @@
     <v-card-text>
       <v-container class="">
         <v-row>
-          <v-col v-for="project in projects" :key="project.title" lg="6" md="6" xs="12">
+          <v-col
+            v-for="project in projects"
+            :key="project.title"
+            lg="6"
+            md="6"
+            sm="6"
+            xs="12"
+          >
             <v-hover>
               <template v-slot:default="{ hover }">
                 <v-card
