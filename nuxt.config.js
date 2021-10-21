@@ -22,6 +22,10 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {
+      src: '~/plugins/aos',
+      mode: 'client'
+    }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -75,5 +79,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config) {
+      // Find the rule which contains a assets file extension
+      const assetsLoader = config.module.rules.find(rule => rule.test.test('.png'))
+
+      // Overwrite the test regex and add `pdf`
+      assetsLoader.test = /\.(png|jpe?g|gif|svg|webp|pdf)$/i
+
+      return config
+    }
   }
 }

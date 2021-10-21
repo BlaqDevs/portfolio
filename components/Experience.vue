@@ -11,8 +11,9 @@
       <v-container class="">
         <v-row>
           <v-col
-            v-for="i in experience"
-            :key="i.place"
+            :data-aos=" index % 3 ? 'fade-left' : 'fade-right'"
+            v-for="(i, index) in experience"
+            :key="index"
             lg="6"
             md="6"
             sm="6"
@@ -50,6 +51,12 @@ export default {
   data () {
     return {
       experience: [
+        {
+          place: 'University Of Benin ICTU',
+          title: 'Intenship - 2019',
+          content:
+            'Intern at The University Of Benin ICTU for a period of 6months'
+        },
         {
           place: 'University Of Benin ICTU',
           title: 'Intenship - 2019',

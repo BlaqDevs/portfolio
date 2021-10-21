@@ -30,18 +30,18 @@
               required
             />
             <v-card-actions>
-              <v-btn
+              <v-chip
                 :disabled="!valid"
-                color="success"
+                outlined
                 class="mr-4"
                 @click="validate"
               >
                 Submit
-              </v-btn>
+              </v-chip>
 
-              <v-btn color="error" class="mr-4" @click="reset">
+              <v-chip color="error" outlined class="mr-4" @click="reset">
                 Reset Form
-              </v-btn>
+              </v-chip>
             </v-card-actions>
           </v-form>
         </v-col>

@@ -2,7 +2,7 @@
   <v-card class="mx-auto my-16" width="900">
     <v-card-title class="justify-center mt-n14 ">
       <v-avatar size="200" color="white" class=" mt-n14 pb-1">
-        <img src="~/static/blaqdevs.jpeg" alt="">
+        <img src="~/static/blaqdevs.jpeg" alt="" style="object-fit: cover;" />
       </v-avatar>
     </v-card-title>
     <v-card-title class="justify-center mx-auto">
@@ -86,7 +86,14 @@
 
     <v-card-actions class="ma-5">
       <v-row justify="center">
-        <v-btn rounded block text outlined>
+        <v-btn
+          rounded
+          block
+          text
+          outlined
+          to="/resume"
+          data-aos="flip-up"
+        >
           <v-icon left color="">
             mdi-account-hard-hat
           </v-icon>
@@ -96,7 +103,6 @@
     </v-card-actions>
   </v-card>
 </template>
-
 <script>
 export default {
   data: () => ({

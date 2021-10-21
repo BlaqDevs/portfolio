@@ -11,8 +11,9 @@
       <v-container class="">
         <v-row>
           <v-col
-            v-for="project in projects"
-            :key="project.title"
+            v-for="(project, index) in projects"
+            :data-aos=" index % 3 ? 'fade-left' : 'fade-right'"
+            :key="index"
             lg="6"
             md="6"
             sm="6"
