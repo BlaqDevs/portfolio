@@ -12,15 +12,15 @@
         <v-row>
           <v-col
             v-for="(project, index) in projects"
-            :data-aos=" index % 3 ? 'fade-left' : 'fade-right'"
             :key="index"
+            :data-aos=" index % 3 ? 'fade-left' : 'fade-right'"
             lg="6"
             md="6"
             sm="6"
             xs="12"
           >
             <v-hover>
-              <template v-slot:default="{ hover }">
+              <template #default="{ hover }">
                 <v-card
                   transition="slide-x-transition"
                   :class="`elevation-${hover ? 24 : 6}`"
@@ -51,10 +51,12 @@
                       class="ma-2"
                       small
                     >
-                      <v-icon color="" small left>
-                        {{ link.icon }}
-                      </v-icon>
-                      <span>{{ link.name }}</span>
+                      <a :href="link.lin" target="blank" style="color:white; text-decoration: none">
+                        <v-icon color="" small left>
+                          {{ link.icon }}
+                        </v-icon>
+                        <span>{{ link.name }}</span>
+                      </a>
                     </v-chip>
                   </v-card-text>
                 </v-card>
@@ -105,41 +107,38 @@ export default {
           content: 'A resturant reservation landing page',
           tech: [
             {
-              name: 'Vue',
-              icon: 'mdi-vuejs'
+              name: 'HTML5',
+              icon: 'mdi-language-html5'
             },
             {
-              name: 'Nuxt',
-              icon: 'mdi-nuxt'
+              name: 'CSS3',
+              icon: 'mdi-language-css3'
             },
             {
-              name: 'vuetify',
-              icon: 'mdi-vuetify'
+              name: 'Bootstrap',
+              icon: 'mdi-bootstrap'
             }
           ],
           links: [
             {
               name: 'Github',
-              icon: 'mdi-github'
+              icon: 'mdi-github',
+              lin: 'https://github.com/BlaqDevs/reservation-landing-page'
             },
             {
               name: 'Live',
               icon: 'mdi-eye',
-              link: ''
+              lin: 'https://reservation-landing.netlify.app'
             }
           ]
         },
         {
-          title: 'Portfolio',
-          content: 'this portfolio',
+          title: 'Blaq-todo',
+          content: 'Team todo list',
           tech: [
             {
               name: 'Vue',
               icon: 'mdi-vuejs'
-            },
-            {
-              name: 'Nuxt',
-              icon: 'mdi-nuxt'
             },
             {
               name: 'vuetify',
@@ -150,12 +149,12 @@ export default {
             {
               name: 'Github',
               icon: 'mdi-github',
-              link: ''
+              lin: 'https://github.com/BlaqDevs/app1'
             },
             {
               name: 'Live',
               icon: 'mdi-eye',
-              link: ''
+              lin: 'https://blaq-todo.netlify.app'
             }
           ]
         }

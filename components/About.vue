@@ -2,7 +2,7 @@
   <v-card class="mx-auto my-16" width="900">
     <v-card-title class="justify-center mt-n14 ">
       <v-avatar size="200" color="white" class=" mt-n14 pb-1">
-        <img src="~/static/blaqdevs.jpeg" alt="" style="object-fit: cover;" />
+        <img src="~/static/blaqdevs.jpeg" alt="" style="object-fit: cover;">
       </v-avatar>
     </v-card-title>
     <v-card-title class="justify-center mx-auto">

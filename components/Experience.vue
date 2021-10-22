@@ -11,16 +11,16 @@
       <v-container class="">
         <v-row>
           <v-col
-            :data-aos=" index % 3 ? 'fade-left' : 'fade-right'"
             v-for="(i, index) in experience"
             :key="index"
+            :data-aos=" index % 3 ? 'fade-left' : 'fade-right'"
             lg="6"
             md="6"
             sm="6"
             xs="12"
           >
             <v-hover>
-              <template v-slot:default="{ hover }">
+              <template #default="{ hover }">
                 <v-card
                   :class="`elevation-${hover ? 24 : 6}`"
                   class="mx-auto pa-6 transition-swing"
