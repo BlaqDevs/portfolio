@@ -1,7 +1,7 @@
 <template>
   <nav class="primary">
     <v-app-bar color="primary" dense app>
-      <v-app-bar-title class="primary">
+      <v-app-bar-title class="primary hidden-xs-only">
         BlaqDevs
       </v-app-bar-title>
       <v-spacer />

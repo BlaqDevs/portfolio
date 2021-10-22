@@ -58,16 +58,10 @@ export default {
             'Intern at The University Of Benin ICTU for a period of 6months'
         },
         {
-          place: 'University Of Benin ICTU',
-          title: 'Intenship - 2019',
+          place: 'Remote',
+          title: 'Freelancer',
           content:
-            'Intern at The University Of Benin ICTU for a period of 6months'
-        },
-        {
-          place: 'University Of Benin ICTU',
-          title: 'Intenship - 2019',
-          content:
-            'Intern at The University Of Benin ICTU for a period of 6months'
+            'Currently a freelancer'
         }
       ]
     }
