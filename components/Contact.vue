@@ -10,13 +10,20 @@
     <v-card-text>
       <v-row class="ma-3 pa-0" justify="center">
         <v-col>
-          <v-form ref="form" v-model="valid" lazy-validation width="600">
+          <v-form
+            ref="form"
+            v-model="valid"
+            width="600"
+            lazy-validation
+            @submit.prevent="sendEmail"
+          >
             <v-text-field
               v-model="name"
               :counter="10"
               color="white"
               :rules="nameRules"
               label="Name"
+              name="user_name"
               required
             />
 
@@ -26,6 +33,7 @@
               label="E-mail"
               color="white"
               required
+              name="user_email"
             />
 
             <v-textarea
@@ -35,13 +43,14 @@
               :rules="[v => !!v || 'Content is required']"
               label="Content"
               required
+              name="message"
             />
             <v-card-actions>
               <v-chip
                 :disabled="!valid"
                 outlined
                 class="mr-4"
-                @click="validate(); sendEmail();"
+                @click="validate"
               >
                 Submit
               </v-chip>
@@ -58,6 +67,8 @@
 </template>
 <script>
 import emailjs from 'emailjs-com'
+// import { init } from 'emailjs-com'
+// init('user_ObILYM3HNKuLcWS9TO47d')
 export default {
   data () {
     return {
@@ -76,30 +87,30 @@ export default {
     }
   },
   methods: {
-    validate () {
-      this.$refs.form.validate()
-    },
-    reset () {
-      this.$refs.form.reset()
-    },
-    resetValidation () {
-      this.$refs.form.resetValidation()
-    },
-    sendEmail (e) {
+    validate (e) {
       try {
-        emailjs.sendForm('service_48xjgkk', 'template_n0yn2bh', e.target,
+        this.$refs.form.validate()
+        console.log(this.name, this.email, this.message)
+        // eslint-disable-next-line no-undef
+        emailjs.sendForm('service_48xjgkk', 'template_n0yn2bh', this.$refs.form,
           'user_ObILYM3HNKuLcWS9TO47d', {
             name: this.name,
             email: this.email,
             message: this.message
           })
       } catch (error) {
-        console.log({ error })
+        console.log('the error', { error })
       }
       // Reset form field
       this.name = ''
       this.email = ''
       this.message = ''
+    },
+    reset () {
+      this.$refs.form.reset()
+    },
+    resetValidation () {
+      this.$refs.form.resetValidation()
     }
   }
 }

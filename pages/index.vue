@@ -10,20 +10,20 @@
       <Projects />
     </v-row>
     <v-row justify="center" align="center">
-      <Contact id="contact" />
+      <!-- <Contact id="contact" /> -->
     </v-row>
   </div>
 </template>
 
 <script>
 import About from '~/components/About.vue'
-import Contact from '~/components/Contact.vue'
+// import Contact from '~/components/Contact.vue'
 import Experience from '~/components/Experience.vue'
 import Projects from '~/components/Projects.vue'
 export default {
   components: {
     About,
-    Contact,
+    // Contact,
     Experience,
     Projects
   }
