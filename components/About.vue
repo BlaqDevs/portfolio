@@ -54,17 +54,6 @@
         </v-chip>
         <v-chip class="ma-3">
           <v-icon left>
-            mdi-vuetify
-          </v-icon>
-          Vuetify
-        </v-chip>
-        <v-chip class="ma-3">
-          Quasar
-        </v-chip>
-      </v-row>
-      <v-row justify="center">
-        <v-chip class="ma-3">
-          <v-icon left>
             mdi-language-javascript
           </v-icon>
           Java Script
@@ -75,11 +64,34 @@
           </v-icon>
           HTML
         </v-chip>
+      </v-row>
+      <v-row justify="center">
+        <v-chip class="ma-3">
+          <v-icon left>
+            mdi-bootstrap
+          </v-icon>
+          Bootstrap
+        </v-chip>
+        <v-chip class="ma-3">
+          <v-icon left>
+            mdi-vuetify
+          </v-icon>
+          Vuetify
+        </v-chip>
+        <v-chip class="ma-3">
+          Quasar
+        </v-chip>
         <v-chip class="ma-3">
           <v-icon left>
             mdi-language-css3
           </v-icon>
           CSS
+        </v-chip>
+        <v-chip class="ma-3">
+          <v-icon left>
+            mdi-tailwind
+          </v-icon>
+          Tailwind
         </v-chip>
       </v-row>
     </v-card-text>
