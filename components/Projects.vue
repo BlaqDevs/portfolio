@@ -75,6 +75,36 @@ export default {
     return {
       projects: [
         {
+          title: 'Virtual Keyboard Plugin',
+          content: 'A Virtual Keyboard Plugin',
+          tech: [
+            {
+              name: 'Vue',
+              icon: 'mdi-vuejs'
+            },
+            {
+              name: 'Tailwind',
+              icon: 'mdi-tailwind'
+            },
+            {
+              name: 'CSS3',
+              icon: 'mdi-css'
+            }
+          ],
+          links: [
+            {
+              name: 'Github',
+              icon: 'mdi-github',
+              lin: 'github.com/BlaqDevs/Keyboard-Layoout'
+            },
+            {
+              name: 'Live',
+              icon: 'mdi-eye',
+              link: 'b-keyboard.netlify.app'
+            }
+          ]
+        },
+        {
           title: 'Portfolio',
           content: 'this portfolio',
           tech: [

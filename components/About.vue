@@ -12,10 +12,13 @@
       <v-container class="">
         <v-row justify="center" no-gutters>
           <v-chip class="ma-3" outlined>
+            Frontend Developer
+          </v-chip>
+          <v-chip class="ma-3" outlined>
             Web Developer
           </v-chip>
           <v-chip class="ma-3" outlined>
-            Cross-platform Developer
+            VueJs Developer
           </v-chip>
         </v-row>
       </v-container>
@@ -24,8 +27,8 @@
         justify-center
       >
         Hi, I am a passionate developer with good experience designing Webapps,
-        Blogs, Cross-Platform Apps Opensource Projects, etc utilizing varieties
-        of Software Technologies which include Vuejs, Nuxt, Quasar, Nodejs,
+        Blogs, etc utilizing varieties
+        of Software Technologies which include Vuejs, Nuxt, Tailwind, Quasar, Nodejs,
         Bootstrap, Scss, Git
       </p>
       <p class="text-body1 text-center px-md-16 px-sm-0" justify-center>
