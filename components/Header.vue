@@ -25,12 +25,12 @@
             </v-icon>
             <span class="hidden-xs-only">Projects</span>
           </v-tab>
-          <v-tab to="#contact">
+          <!-- <v-tab to="#contact">
             <v-icon class="d-flex d-sm-none">
               mdi-card-account-mail-outline
             </v-icon>
             <span class="hidden-xs-only">Contact</span>
-          </v-tab>
+          </v-tab> -->
         </v-tabs>
       </div>
     </v-app-bar>

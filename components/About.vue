@@ -15,9 +15,6 @@
             Web Developer
           </v-chip>
           <v-chip class="ma-3" outlined>
-            Mobile Developer
-          </v-chip>
-          <v-chip class="ma-3" outlined>
             Cross-platform Developer
           </v-chip>
         </v-row>
