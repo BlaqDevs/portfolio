@@ -88,7 +88,7 @@ export default {
             },
             {
               name: 'CSS3',
-              icon: 'mdi-css'
+              icon: 'mdi-language-css3'
             }
           ],
           links: [

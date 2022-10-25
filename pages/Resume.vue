@@ -54,7 +54,7 @@ export default {
   },
   mounted () {
     const dwnloader = document.getElementById('downloader')
-    dwnloader.download = 'overcomeremiator_resume'
+    dwnloader.download = 'Adenomor Omoyokan Moses'
   }
 }
 </script>

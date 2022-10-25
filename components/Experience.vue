@@ -71,9 +71,9 @@ export default {
         },
         {
           place: 'Remote',
-          title: 'Freelancer',
+          title: 'Freelance Frontend Developer',
           content:
-            'Currently a freelancer'
+            'Developed forms, dashboards and online reminder system using HTML and CSS. Built an e-commerce site using wordpress. Translated user and business needs into functional frontend design using Vuejs, Nuxt, Vuetify.'
         }
       ]
     }
