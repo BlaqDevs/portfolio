@@ -100,7 +100,7 @@ export default {
             {
               name: 'Live',
               icon: 'mdi-eye',
-              link: 'b-keyboard.netlify.app'
+              link: 'https://mykeyboardlayout.netlify.app/'
             }
           ]
         },
